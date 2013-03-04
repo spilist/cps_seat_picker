@@ -1,0 +1,65 @@
+.rooms-top {
+	margin-bottom: 10px;
+}
+.room-label {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+.radio-description {
+	float: left;
+	margin-right: 10px;
+}
+
+.inactive-room .room-label {
+	margin-top: 10px;
+	color: gray;
+}
+
+.inactive-room .room-shape {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(120, 120, 120, 0.8);
+}
+
+.hidden-radio {
+	height: 15px;
+}
+
+#left-container {
+	text-align: center;
+}
+
+.room-shape {
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	height: 200px;
+}
+
+.seat-box {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(120, 120, 120, 0.8);
+	border-radius: 6px;
+	color: white;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	position: relative;
+	float: left;
+}
+
+.seat-left {
+	left: 10%;
+}
+
+.seat-right {
+	left: 30%;
+}
+
+.blue {
+	color: blue;
+}
+.highlight {
+	background: yellow;
+}
