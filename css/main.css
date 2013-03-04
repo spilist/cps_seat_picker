@@ -77,3 +77,15 @@ table {
 	text-align:center;
 	font-size:12px;
 }
+
+.inactive-input {
+	color:gray;
+}
+
+#generating-policy {
+	margin-bottom:20px;
+}
+
+#generate-box {
+	text-align:center;
+}

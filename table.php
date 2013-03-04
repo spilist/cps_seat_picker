@@ -20,16 +20,18 @@ include_once ('./db.php');
 		$index = 1;
 		while ($row = mysql_fetch_array($result)) {			
 			echo 
-			'<tr>
+			'<tr id="student'.$index.'">
 				<td>'.$index++.'</td>
-				<td>'.$row['name'].'</td>
+				<td class="name">'.$row['name'].'</td>
 				<td><img class="img-rounded" src="img/profiles'.$row['pic_url'].'"></td>
-				<td>'.$row['floor'].'</td>
-				<td>'.$row['program'].'</td>
-				<td>'.$row['research_group'].'</td>
+				<td class="floor">'.$row['floor'].'</td>
+				<td class="program">'.$row['program'].'</td>
+				<td class="research_group">'.$row['research_group'].'</td>
 			</tr>';
 		}
 		?>
 	</tbody>
 </table>
-
+<script>
+	var num_students = <?php echo $index-1 ?>;
+</script>

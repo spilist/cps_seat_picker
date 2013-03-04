@@ -11,7 +11,7 @@ include_once('./room_shape.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/main.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">    
   </head>
   <body>
   	<div class="container-fluid">
@@ -44,9 +44,18 @@ include_once('./room_shape.php');
   			<div id="middle-container" class="span2">
   				<div id="generating-policy">
   					<h4>Generating Policy</h4>
+  					<label class="checkbox">
+						<input type="checkbox" id="checkbox-seniority" value=""> Consider seniority  
+					</label>
+					<label class="checkbox">
+						<input type="checkbox" id="checkbox-research-group" value=""> Consider research group  
+					</label>
+					<label class="checkbox inactive-input">
+						<input type="checkbox" id="checkbox-attendting-time" value="" disabled> Consider attending time  
+					</label>
   				</div>
   				<div id="generate-box">
-  					<button class="btn btn-large btn-primary" type="button">Generate!</button>
+  					<button class="btn btn-large btn-primary" type="button" onclick="generate()">Generate Seats!</button>
   				</div>
   			</div>
   			<div id="right-continaer" class="span4">
@@ -57,28 +66,7 @@ include_once('./room_shape.php');
   		</div>
   	</div>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-    	$(".btn-mini").click( function () {
-    		if (this.value=='3') {
-    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
-    			$(name).addClass("hidden");
-    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
-    			$(name).addClass("hidden");
-    		}
-    		else if (this.value=='4') {
-    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
-    			$(name).removeClass("hidden");
-    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
-    			$(name).addClass("hidden");
-    		}
-    		else {
-    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
-    			$(name).removeClass("hidden");
-    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
-    			$(name).removeClass("hidden");
-    		}
-    	});
-    </script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/main.js"></script>
   </body>
 </html>
