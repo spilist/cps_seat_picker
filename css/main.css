@@ -18,7 +18,7 @@
 
 .inactive-room .room-shape {
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	background-color: rgba(120, 120, 120, 0.8);
+	background-color: rgba(150, 150, 150, 0.8);
 }
 
 .hidden-radio {
@@ -39,7 +39,7 @@
 
 .seat-box {
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	background-color: rgba(120, 120, 120, 0.8);
+	background-color: rgba(96, 165, 197, 0.77);
 	border-radius: 6px;
 	color: white;
 	height: 50px;
@@ -55,13 +55,6 @@
 
 .seat-right {
 	left: 30%;
-}
-
-.blue {
-	color: blue;
-}
-.highlight {
-	background: yellow;
 }
 
 .hidden {
@@ -80,6 +73,7 @@ table {
 
 .inactive-input {
 	color:gray;
+	cursor:default;
 }
 
 #generating-policy {
@@ -87,5 +81,19 @@ table {
 }
 
 #generate-box {
+/*	width:100%;*/
+}
+#generate-btn {
+	/*text-align:center;*/
+	float:left;
+}
+
+#generate-status p {
 	text-align:center;
+	line-height: 42px;
+	font-style:italic;
+}
+
+.none {
+	display:none;
 }

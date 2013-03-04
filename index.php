@@ -31,7 +31,7 @@ include_once('./room_shape.php');
   						<?php showRoom(4427, TRUE, 4, TRUE);?>
   					</div>
   				</div>
-  				<div id="2nd-floor">
+  				<div id="2nd-floor" class="none">
   					<h2>2nd floor</h2>
   					<div id="2nd-floor" class="row-fluid">
   						<div class="span2"></div>
@@ -44,18 +44,26 @@ include_once('./room_shape.php');
   			<div id="middle-container" class="span2">
   				<div id="generating-policy">
   					<h4>Generating Policy</h4>
-  					<label class="checkbox">
-						<input type="checkbox" id="checkbox-seniority" value=""> Consider seniority  
+  					<label class="checkbox inactive-input">
+						<input type="checkbox" id="checkbox-seniority" value="" disabled> Consider seniority  
 					</label>
-					<label class="checkbox">
-						<input type="checkbox" id="checkbox-research-group" value=""> Consider research group  
+					<label class="checkbox inactive-input">
+						<input type="checkbox" id="checkbox-research-group" value="" disabled> Consider research group  
 					</label>
 					<label class="checkbox inactive-input">
 						<input type="checkbox" id="checkbox-attendting-time" value="" disabled> Consider attending time  
 					</label>
   				</div>
   				<div id="generate-box">
-  					<button class="btn btn-large btn-primary" type="button" onclick="generate()">Generate Seats!</button>
+  					<button id="generate-btn" class="btn btn-large btn-primary" 
+  					type="button" data-loading-text="Loading..." onclick="generate()">Generate!</button>
+  					<div id="generate-status">
+  						<p id="generate-status-error" class="text-error resettable none">Error</p>
+  						<p id="generate-status-success" class="text-success resettable none">Done</p>
+  					</div>
+  					<div id="generate-info">
+  						<p id="info-too-few-seats" class="text-info resettable none">The number of studnets are larger than the number of seats.</p>	
+  					</div>  					
   				</div>
   			</div>
   			<div id="right-continaer" class="span4">
@@ -66,7 +74,7 @@ include_once('./room_shape.php');
   		</div>
   	</div>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -17,14 +17,31 @@ $(".btn-mini").click(function() {
 	}
 });
 
-function generate() {	
-	var num_seats = 0;
-	for (var i = 0; i < 4; ++i) {
-		num_seats += parseFloat($('.btn.active')[i].value);
-	}
-	alert(num_students);
-	alert(num_seats);
+function resetAll() {
+	$('.btn-primary').button('reset');
+	$('.resettable').addClass('none');	
 }
+
+function generate() {
+	$('.btn-primary').button('loading');
+	var num_seats = 0;
+	$.each($('.btn.active'), function() {
+		num_seats += parseFloat(this.value);
+	});
+	if (num_students > num_seats) {
+		resetAll();
+		$('#generate-status-error').removeClass('none');
+		$('#info-too-few-seats').removeClass('none');
+	}
+	resetAll();	
+	$('#generate-status-success').removeClass('none');
+}
+
+$.each($('#4th-floor .btn-mini'), function() {
+	if(this.value == 4) {
+		this.click();
+	}
+});
 
 /*
 !function ($) {
