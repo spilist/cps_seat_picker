@@ -23,7 +23,7 @@ include_once ('./db.php');
 			'<tr>
 				<td>'.$index++.'</td>
 				<td>'.$row['name'].'</td>
-				<td><img class="img-rounded" src="'.$row['pic_url'].'"></td>
+				<td><img class="img-rounded" src="img/profiles'.$row['pic_url'].'"></td>
 				<td>'.$row['floor'].'</td>
 				<td>'.$row['program'].'</td>
 				<td>'.$row['research_group'].'</td>
