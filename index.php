@@ -41,21 +41,44 @@ include_once('./room_shape.php');
   					</div>
   				</div>		
   			</div>
-  			<div id="right-continaer" class="span4">
-  				<div id="student-table">
-  					<?php include('./table.php');?>
-  				</div>
+  			<div id="middle-container" class="span2">
   				<div id="generating-policy">
-  					<h2>Generating Policy</h2>
+  					<h4>Generating Policy</h4>
   				</div>
   				<div id="generate-box">
   					<button class="btn btn-large btn-primary" type="button">Generate!</button>
   				</div>
-  							
+  			</div>
+  			<div id="right-continaer" class="span4">
+  				<div id="student-table">
+  					<?php include('./table.php');?>
+  				</div>
   			</div>
   		</div>
   	</div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(".btn-mini").click( function () {
+    		if (this.value=='3') {
+    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
+    			$(name).addClass("hidden");
+    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
+    			$(name).addClass("hidden");
+    		}
+    		else if (this.value=='4') {
+    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
+    			$(name).removeClass("hidden");
+    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
+    			$(name).addClass("hidden");
+    		}
+    		else {
+    			var name = '#'+this.id.split("-")[0]+'-seat4';    			
+    			$(name).removeClass("hidden");
+    			var name = '#'+this.id.split("-")[0]+'-seat5';    			
+    			$(name).removeClass("hidden");
+    		}
+    	});
+    </script>
   </body>
 </html>
