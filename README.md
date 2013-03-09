@@ -1,9 +1,10 @@
-CPS Seat Picker
-==============================History==============================
+CPS Seat Picker by Hwidong Bae and CPS @ KAIST
+
+==History==
 
 2013.03.10 Ver 1.0 완성.
 
-==============================Install==============================
+==Install==
 
 1. reference 디렉토리의 sql.zip을 자신의 DB에 import한다.
 
