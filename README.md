@@ -11,4 +11,4 @@ CPS Seat Picker
 
 2. db.php를 열어 자기 DB에 맞는 username, password, dbname을 적는다.
 
-2-1. 자신의 DB가 비밀번호를 사용한다면, mysql_connect 함수에서 $password 앞뒤로 쳐진 주석을 지운다.
+2-1. 자신의 DB가 비밀번호를 사용한다면, mysql_connect 함수의 파라미터로 $password를 추가한다.
