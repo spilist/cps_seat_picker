@@ -5,7 +5,7 @@ $username = 'root';
 $password = 'root';
 $dbname = 'seat_picker';
 
-$link = mysql_connect($host, $username, $password);
+$link = mysql_connect($host, $username);
 if (!$link) {
   die('접속실패 : ' . mysql_error());
 } 

@@ -1,0 +1,24 @@
+#generating-policy {
+	margin-bottom:20px;
+}
+
+#generate-box {
+/*	width:100%;*/
+}
+#generate-btn {
+	/*text-align:center;*/
+	float:left;
+}
+
+#generate-status p {
+	text-align:center;
+	line-height: 42px;
+	font-style:italic;
+	float:left;
+	margin-left:10px;
+}
+
+#generate-info {
+	clear:both;
+	margin-top:10px;	
+}

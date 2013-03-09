@@ -1,0 +1,64 @@
+.rooms {
+	float:left;
+}
+
+.rooms-flipped {
+	margin-top:10px;
+}
+
+.room {
+	float:left;
+	margin-left:10px;
+}
+
+.room-size-small {
+	width: 150px;
+}
+
+.inactive-room .room-label {
+	margin-top: 10px;
+	color: gray;
+}
+
+.inactive-room .room-shape {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(150, 150, 150, 0.8);
+}
+
+.room-label {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+.room-shape {
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	height: 230px;
+}
+
+.seats {
+	float:left;
+	width:150px;
+}
+
+.seat-container {
+	width: 75px;
+	position: relative;
+	float: left;
+	height: 75px;
+}
+
+.seat-label {
+	margin-bottom:0px;
+}
+.seat-box {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(96, 165, 197, 0.77);
+	border-radius: 6px;
+	color: white;
+	height: 50px;
+	width: 50px;
+	margin: auto;
+}
