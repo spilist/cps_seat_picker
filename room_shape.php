@@ -39,12 +39,12 @@ function showSeats($room, $number) {
 	if ($number==1) {
 		echo
 		'<div class="seats seats-1st clearfix">
-			<div class="seat-container">
+			<div id="'.$room.'-seat1" class="seat-container">
 				<label id="'.$room.'-seat1-label" class="seat-label">Seat1</label>
 				<div id="'.$room.'-seat1-box" class="seat-box"></div>
 			</div>
-			<div class="seat-container">
-				<label id="'.$room.'-seat2-box-label" class="seat-label">Seat2</label>
+			<div id="'.$room.'-seat2" class="seat-container">
+				<label id="'.$room.'-seat2-label" class="seat-label">Seat2</label>
 				<div id="'.$room.'-seat2-box" class="seat-box"></div>
 			</div>
 		</div>';
@@ -52,12 +52,12 @@ function showSeats($room, $number) {
 	else if ($number==2) {
 		echo
 		'<div class="seats seats-2nd clearfix">
-			<div class="seat-container">
+			<div id="'.$room.'-seat3" class="seat-container">
 				<label id="'.$room.'-seat3-label" class="seat-label">Seat3</label>
 				<div id="'.$room.'-seat3-box" class="seat-box"></div>
 			</div>
-			<div class="seat-container">
-				<label id="'.$room.'-seat4-box-label" class="seat-label">Seat4</label>
+			<div id="'.$room.'-seat4" class="seat-container">
+				<label id="'.$room.'-seat4-label" class="seat-label">Seat4</label>
 				<div id="'.$room.'-seat4-box" class="seat-box"></div>
 			</div>
 		</div>';
@@ -65,7 +65,7 @@ function showSeats($room, $number) {
 	else if ($number==3) {
 		echo
 		'<div class="seats seats-3rd clearfix">
-			<div class="seat-container">
+			<div id="'.$room.'-seat5" class="seat-container">
 				<label id="'.$room.'-seat5-label" class="seat-label">Seat5</label>
 				<div id="'.$room.'-seat5-box" class="seat-box"></div>
 			</div>			

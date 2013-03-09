@@ -49,7 +49,6 @@ include_once ('./db.php');
 		<?php
 		$sql = "SELECT * FROM `students`";
 		$result = mysql_query($sql);
-		$index = 1;
 		while ($row = mysql_fetch_array($result)) {
 			if ($row['status']=='1' && $row['program']!='Ph.D') {
 				echo 
