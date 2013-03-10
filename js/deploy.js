@@ -1,6 +1,10 @@
 function resetStatus() {
 	$('.btn-primary').button('reset');
-	$('.resettable').addClass('none');	
+	$('.resettable').addClass('none');
+	$('.seat-container:not(.hidden)').find('label').each(function(index) {		
+		$(this).text($(this).attr("value"));
+	});
+	$('.seat-container:not(.hidden)').find('.seat-box').html("");
 }
 
 function getNumStudents() {
@@ -59,23 +63,34 @@ function getSeatsArray() {
 	return seat_arr;
 }
 
+function showRandom() {
+	var faders = $('.seat-container:not(.hidden)').hide();
+	var faders_arr = [];
+	for (var index = 0; index < faders.length; ++index) {
+		faders_arr.push(faders[index]);
+	}
+	faders_arr.shuffle();
+	faders_arr.push($('#generate-status').hide());		
+	
+	var index = 0;
+	function awesomeFaders() {
+		$(faders_arr[index++]).delay(500).fadeIn(100, arguments.callee);	
+	};
+	awesomeFaders();
+}
+
 function generate() {
 	resetStatus();
 	if (isError() == false) {		
 		var student_arr_random = getStudentArray().shuffle();
 		var seat_arr_random = getSeatsArray().shuffle();
+		
 		for (var index = 0; index < student_arr_random.length; ++index) {			
 			$(seat_arr_random[index].box).html('<img src="'+student_arr_random[index].pic_src+'"></img>');
 			$(seat_arr_random[index].label).text(student_arr_random[index].name);			
 		}
 		
-		var faders = $('.seat-container:not(.hidden), #generate-status').hide();
-		var i=0;
-		function awesomeFaders() {
-			$(faders[i++]).delay(500).fadeIn(100, arguments.callee);			
-		};
-		awesomeFaders();			
-		
+		showRandom();
 		$('#generate-status-success').removeClass('none');		
 	}
 }
